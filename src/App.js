@@ -7,6 +7,7 @@ function App() {
     <div className='h-screen w-full'>
       <Header />
       <Jumbotron />
+      <Jumbotron />
     </div>
   );
 }
