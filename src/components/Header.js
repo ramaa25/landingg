@@ -1,11 +1,11 @@
 import Button from "./Button";
 import Menu from "./Header/Menu"
-import Logo from "../img/logoo.png"
+import Logo from "../img/logo-food.png"
 
 const Header = () => {
     return (
-        <div className="grid grid-cols-[auto_1fr_auto] w-full bg-white">
-            <div className="bg-black h-20 w-20">
+        <div className="grid grid-cols-[auto_1fr_auto] w-full">
+            <div className="h-20 w-20">
                 <img src={Logo} alt="logo" className="object-cover w-full h-full"/>
             </div>
             <div className="bg-[#374552]">
