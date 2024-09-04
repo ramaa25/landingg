@@ -8,11 +8,11 @@ const Header = () => {
             <div className="h-full w-20">
                 <img src={Logo} alt="logo" className="object-cover w-full h-full"/>
             </div>
-            <div className="bg-[#1B263B] relative">
+            <div className="bg-semi-dark relative">
                 <Menu />
                 <div className="flex md:hidden bg-[#E0E1DD] w-full h-full rounded-br-3xl absolute"></div>
             </div>
-            <div className="place-content-center grid p-3 rounded-tl-[2rem] rounded-tr-[2rem] bg-[#1B263B]">
+            <div className="place-content-center grid p-3 rounded-tl-[2rem] rounded-tr-[2rem] bg-semi-dark">
                 <Button title="Download App" />
             </div>
         </div>

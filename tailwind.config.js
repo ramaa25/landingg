@@ -16,6 +16,11 @@ module.exports = {
       backgroundImage: {
         'radial-gradient': 'radial-gradient(circle, #0D1B2A, #0D1B2A, #1B263B, #1B263B, transparent)',
       },
+      colors: {
+        'primary': '#E0E1DD',
+        'dark': '#0D1B2A',
+        'semi-dark': '#1B263B',
+      }
     },
   },
   plugins: [],

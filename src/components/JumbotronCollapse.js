@@ -9,9 +9,9 @@ const JumbotronCollapse = () => {
                 <img src={Food} alt="" className="rounded-[3rem] rounded-tl-[2.5rem] object-cover w-full h-full"/>
             </div>
             <div className="bg-[#E0E1DD] row-start-3 col-start-6"></div>
-            <div className="bg-[#1B263B] row-start-3 col-start-6 rounded-br-[3rem]"></div>
+            <div className="bg-semi-dark row-start-3 col-start-6 rounded-br-[3rem]"></div>
             <div className="bg-[#E0E1DD] row-start-4 col-start-4"></div>
-            <div className="bg-[#1B263B] row-start-4 col-start-4 rounded-br-[3rem]"></div>
+            <div className="bg-semi-dark row-start-4 col-start-4 rounded-br-[3rem]"></div>
         </>
     )
 }
