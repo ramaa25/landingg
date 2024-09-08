@@ -16,10 +16,10 @@ const ImgJumbotronVar = () => {
             <div className="w-20 h-20 rounded-full overflow-hidden border-white border-2 -translate-x-10">
                 <img src={Logo3} alt="" className="object-cover w-full h-full" />
             </div>
-            <div className="w-20 h-20 rounded-full overflow-hidden border-white border-2 -translate-x-[5rem]">
+            <div className="w-20 h-20 rounded-full overflow-hidden border-white border-2 -translate-x-[4rem]">
                 <img src={Logo4} alt="" className="object-cover w-full h-full" />
             </div>
-            <div className="w-20 h-20 rounded-full overflow-hidden border-white border-2 -translate-x-[6.5rem]">
+            <div className="w-20 h-20 rounded-full overflow-hidden border-white border-2 -translate-x-[6rem]">
                 <img src={Logo5} alt="" className="object-cover w-full h-full" />
             </div>
         </>

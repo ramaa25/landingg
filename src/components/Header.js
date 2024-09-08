@@ -1,6 +1,7 @@
 import Button from "./Button";
 import Menu from "./Header/Menu"
 import Logo from "../img/logo-food.png"
+import { MenuIcon } from "lucide-react";
 
 const Header = () => {
     return (
@@ -13,7 +14,8 @@ const Header = () => {
                 <div className="flex md:hidden bg-[#E0E1DD] w-full h-full rounded-br-3xl absolute"></div>
             </div>
             <div className="place-content-center grid p-3 rounded-tl-[2rem] rounded-tr-[2rem] bg-semi-dark">
-                <Button title="Download App" />
+                <Button title="Download App" className={"hidden md:block"} />
+                <Button title={<MenuIcon />} className={"md:hidden block"} />
             </div>
         </div>
     )
