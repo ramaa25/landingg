@@ -5,24 +5,25 @@ import Logo4 from "../img/parfum-jumbotron4.jpg"
 import Logo5 from "../img/parfum-jumbotron5.jpg"
 
 const ImgJumbotronVar = () => {
+    const logoAll = [Logo1, Logo2, Logo3, Logo4, Logo5];
+    
     return (
-        <>
-            <div className="w-20 h-20 rounded-full overflow-hidden border-white border-2">
-                <img src={Logo1} alt="" className="object-cover w-full h-full" />
+        <div className="grid grid-flow-col-dense gap-0 place-items-center w-fit place-content-end">
+            {logoAll.map((image, index) => (
+            <div
+                key={index}
+                className={`w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden border-4 border-white relative ${
+                    index !== 0 ? "-ml-8" : ""
+                  }`}
+            >
+                <img
+                src={image}
+                alt={`Image ${index + 1}`}
+                className="w-full h-full object-cover"
+                />
             </div>
-            <div className="w-20 h-20 rounded-full overflow-hidden border-white border-2 -translate-x-5">
-                <img src={Logo2} alt="" className="object-cover w-full h-full" />
-            </div>
-            <div className="w-20 h-20 rounded-full overflow-hidden border-white border-2 -translate-x-10">
-                <img src={Logo3} alt="" className="object-cover w-full h-full" />
-            </div>
-            <div className="w-20 h-20 rounded-full overflow-hidden border-white border-2 -translate-x-[4rem]">
-                <img src={Logo4} alt="" className="object-cover w-full h-full" />
-            </div>
-            <div className="w-20 h-20 rounded-full overflow-hidden border-white border-2 -translate-x-[6rem]">
-                <img src={Logo5} alt="" className="object-cover w-full h-full" />
-            </div>
-        </>
+            ))}
+        </div>
     )
 }
 
