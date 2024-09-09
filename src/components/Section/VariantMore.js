@@ -61,7 +61,7 @@ const VariantMore = ({variants}) => {
     }
 
     return (
-        <div className="grid grid-rows-2 gap-5 text-primary">
+        <div className="grid grid-rows-2 grid-cols-2 md:grid-cols-none gap-5 text-primary">
             <DescRow header={header1} img={img1}/>
             <DescRow header={header2} img={img2}/>
         </div>

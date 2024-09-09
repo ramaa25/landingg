@@ -14,7 +14,7 @@ const JumbotronCollapse = () => {
             </div>
             <div className="bg-[#E0E1DD] row-start-3 col-start-6"></div>
             <div className="bg-semi-dark row-start-2 row-end-4 col-start-5 col-end-7 rounded-br-[3rem]"></div>
-            <div className="bg-[#E0E1DD] row-start-4 col-start-4"></div>
+            <div className="bg-[#E0E1DD] row-start-4 col-start-4 w-20 h-20 place-self-end"></div>
             <div className="bg-semi-dark row-start-3 row-end-5 col-start-3 col-end-5 rounded-br-[3rem] "></div>
         </>
     )

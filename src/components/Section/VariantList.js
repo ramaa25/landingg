@@ -23,7 +23,7 @@ const VariantList = ({variants, setVariants}) => {
     }
     
     return (
-        <div className='flex flex-col gap-3 justify-center'>
+        <div className='flex md:flex-col gap-3 justify-center place-self-start flex-wrap'>
             <Listing logo={EDT} desc="EDT"/>
             <Listing logo={EDP} desc="EDP"/>
             <Listing logo={ExDP} desc="ExDP"/>
