@@ -13,7 +13,7 @@ function App() {
   const [variants, setVariants] = React.useState('EDT');
   
   return (
-    <div className='h-[85vh] w-full'>
+    <div className='h-screen w-full relative'>
       <Header />
       <Jumbotron />
       <Section 
