@@ -54,14 +54,14 @@ const VariantMore = ({variants}) => {
                     <Desc desc={desc2} title="Use" />
                 </div>
                 <div className="absolute rounded-full z-10 top-0 right-0 w-20 h-20 overflow-hidden translate-y-1/2 translate-x-1/2">
-                    <img src={img} alt="" className='w-full h-full object-cover'/>
+                    <img src={img} alt="" className='w-full h-full object-cover' />
                 </div>
             </div>
         )
     }
 
     return (
-        <div className="grid grid-rows-2 grid-cols-2 md:grid-cols-none gap-5 text-primary">
+        <div className="grid grid-rows-2 md:grid-cols-none gap-5 text-primary w-full">
             <DescRow header={header1} img={img1}/>
             <DescRow header={header2} img={img2}/>
         </div>

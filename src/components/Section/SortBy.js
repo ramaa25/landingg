@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const SortDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState('Newest');
+  const dropdownRef = useRef(null); // Ref untuk dropdown
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -13,8 +14,25 @@ const SortDropdown = () => {
     setIsOpen(false);
   };
 
+  // Fungsi untuk mendeteksi klik di luar dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false); // Tutup dropdown jika klik di luar
+      }
+    };
+
+    // Tambahkan event listener untuk klik
+    document.addEventListener('mousedown', handleClickOutside);
+
+    // Cleanup event listener ketika komponen di-unmount
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [dropdownRef]);
+
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block text-left" ref={dropdownRef}>
       <button
         onClick={toggleDropdown}
         className="inline-flex justify-between items-center px-4 py-2 bg-white border border-gray-300 rounded-full shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
@@ -37,7 +55,7 @@ const SortDropdown = () => {
       </button>
 
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+        <div className="origin-top-right absolute right-0 mt-2 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-20">
           <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             <button
               onClick={() => selectOption('Newest')}

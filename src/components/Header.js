@@ -23,7 +23,7 @@ const Header = () => {
                 <img src={Logo} alt="logo" className="object-cover w-full h-full"/>
             </div>
             <div className="bg-semi-dark relative">
-                <Menu />
+                {screenSize.width >= 768 && <Menu />}
                 <div className="flex md:hidden bg-[#E0E1DD] w-full h-full rounded-br-3xl absolute"></div>
             </div>
             <div className="place-content-center grid p-3 rounded-tl-[2rem] rounded-tr-[2rem] bg-semi-dark">

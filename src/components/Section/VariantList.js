@@ -8,14 +8,14 @@ const VariantList = ({variants, setVariants}) => {
         return (
             <div 
             className={
-                `flex rounded-full border-secondary border-2 p-2 gap-5 items-center font-semibold ${variants === desc ? 'bg-semi-dark text-white' : 'bg-transparent'} hover:cursor-pointer`
+                `flex rounded-full border-secondary border-2 p-2 gap-3 md:gap-5 items-center font-semibold ${variants === desc ? 'bg-semi-dark text-white' : 'bg-transparent'} hover:cursor-pointer`
             }
                 onClick={() => setVariants(desc)}
             >
-                <div className={`logo w-10 h-10 p-2 rounded-full overflow-hidden flex-shrink-0 ${variants === desc ? 'bg-white' : 'bg-semi-dark'}`}>
+                <div className={`w-8 h-8 md:w-10 md:h-10 p-2 rounded-full overflow-hidden flex-shrink-0 ${variants === desc ? 'bg-white' : 'bg-semi-dark'}`}>
                     <img src={logo} alt="edt" className={`w-full h-full aspect-[4/4]  ${variants === desc ? 'invert-0' : 'invert'}`}/>
                 </div>
-                <span className="w-full">
+                <span className="text-sm md:text-base">
                     {desc}
                 </span>
             </div>
@@ -23,7 +23,7 @@ const VariantList = ({variants, setVariants}) => {
     }
     
     return (
-        <div className='flex md:flex-col gap-3 justify-center place-self-start flex-wrap'>
+        <div className='flex md:flex-col gap-1 md:gap-3 justify-center place-self-start md:place-self-auto flex-wrap w-full'>
             <Listing logo={EDT} desc="EDT"/>
             <Listing logo={EDP} desc="EDP"/>
             <Listing logo={ExDP} desc="ExDP"/>
