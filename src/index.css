@@ -20,3 +20,38 @@ code {
     monospace;
 }
 
+#container {
+  width: 100vw; /* Lebar viewport penuh */
+  overflow-x: auto; /* Menyediakan gulir horizontal */
+  white-space: nowrap; /* Menyediakan layout baris horizontal */
+  display: flex;
+  align-items: stretch; /* Memastikan item memanfaatkan seluruh tinggi kontainer */
+  height: 100vh;
+  background: crimson;
+}
+
+.item {
+  flex: 1 0 33%; /* Memastikan setiap item memakan 33% dari lebar kontainer */
+  height: 100%; /* Memastikan item memanfaatkan seluruh tinggi kontainer */
+  transition: flex 500ms ease, background 300ms ease;
+  background: navajowhite;
+}
+
+/* Hover effect untuk mengubah background dan ukuran item */
+.item:hover {
+  background: crimson;
+  flex: 2 0 33%; /* Mengubah ukuran item saat di-hover */
+}
+
+/* Mengatur item yang di-hover untuk memodifikasi lebar item lain */
+.item:nth-child(1):hover ~ .item {
+  flex: 0.5 0 33%; /* Mengurangi ukuran item lain saat item 1 di-hover */
+}
+
+.item:nth-child(2):hover ~ .item {
+  flex: 0.5 0 33%; /* Mengurangi ukuran item lain saat item 2 di-hover */
+}
+
+.item:nth-child(3):hover ~ .item {
+  flex: 0.5 0 33%; /* Mengurangi ukuran item lain saat item 3 di-hover */
+}

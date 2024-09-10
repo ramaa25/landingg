@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Jumbotron from './components/Jumbotron';
 import SectionVariants from './components/Section/SectionVariants';
+import SectionTrending from './components/Section/SectionTrending';
 
 const App = () => {
   
@@ -11,6 +12,7 @@ const App = () => {
       <Header />
       <Jumbotron />
       <SectionVariants />
+      <SectionTrending />
     </div>
   );
 }

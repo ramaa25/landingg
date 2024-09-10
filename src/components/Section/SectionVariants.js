@@ -12,7 +12,7 @@ const SectionVariants = () => {
     return (
         <Section 
             header={
-            <>
+            <div className='flex justify-between h-full flex-wrap gap-3'>
                 <div className="grid h-full place-self-center w-full md:w-fit pb-5 md:p-0">
                     <h1 className='text-5xl font-bold'>Types</h1>
                 </div>
@@ -25,7 +25,7 @@ const SectionVariants = () => {
                         <SortDropdown />
                     </div>
                 </div>
-            </>
+            </div>
             }>
             <div className="w-full py-5 grid md:grid-cols-2 xl:grid-cols-[1fr_2fr_1fr] gap-5 md:grid-flow-col-dense">
                 <VariantList variants={variants} setVariants={setVariants} />
