@@ -14,7 +14,7 @@ const SectionVariants = () => {
             header={
             <div className='flex justify-between h-full flex-wrap gap-3'>
                 <div className="grid h-full place-self-center w-full md:w-fit pb-5 md:p-0">
-                    <h1 className='text-5xl font-bold'>Types</h1>
+                    <h1 className='text-4xl text-center md:text-start md:text-5xl font-bold'>Types</h1>
                 </div>
                 <div className="flex items-center gap-5 mx-auto md:m-0">
                     <div className="border-2 border-secondary rounded-full hidden md:flex gap-2 px-5 p-2">

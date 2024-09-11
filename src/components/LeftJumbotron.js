@@ -5,7 +5,7 @@ const LeftJumbotron = () => {
     return (
         <div className="col-span-full row-span-full md:col-start-1 md:col-end-5 lg:row-span-4 lg:col-span-2 grid grid-rows-5 lg:p-10 xl:pl-20 text-primary z-10">
             <div className="row-span-4 md:row-span-3 grid gap-5 place-content-center max-[380px]:p-8 p-10 lg:p-0">
-                <div className="text-3xl sm:text-4xl md:text-5xl whitespace-nowrap font-extrabold flex flex-col gap-2 w-full">
+                <div className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl whitespace-nowrap font-extrabold flex flex-col gap-2 w-full">
                     <h1 className="">Discover Simple,</h1>
                     <h1 className="">Inexpensive &</h1>
                     <h1 className=" text-red-800">Long Fragnance!</h1>
