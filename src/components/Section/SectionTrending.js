@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Section from './Section';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Info } from 'lucide-react';
 import Trend1 from '../../img/sec-trending1.jpg'
 import Trend2 from '../../img/sec-trending2.jpg'
 import Trend3 from '../../img/sec-trending3.jpg'
@@ -63,16 +63,18 @@ const SectionTrending = () => {
     }, []);
 
     const Items = ({bg, desc, header}) => {
-        const [isClicked, setIsClicked] = useState(false);
         return (
             <div
-                className={`bg-gray-300 rounded-3xl flex-none w-[47.5%] sm:w-[31.85%] lg:w-[32.75%] transition-all duration-500 ease-out md:hover:w-1/2 bg-cover will-change-transform grid overflow-hidden bg-center group ${isClicked ? 'w-full snap-start' : 'snap-align-none'}`}
+                className={`bg-gray-300 rounded-3xl flex-none w-[47.5%] sm:w-[31.85%] lg:w-[32.75%] transition-all duration-500 ease-out bg-cover will-change-transform grid overflow-hidden bg-center group relative`}
                 style={{ backgroundImage: `url(${bg})` }}
-                onClick={() => setIsClicked(true)}
             >
-                <div className="grid h-1/3 group-hover:h-1/2 transition-all duration-500 ease-out md:h-1/4 w-full place-self-end text-primary overflow-y-auto p-3 backdrop-brightness-75">
-                    <h1 className='text-sm font-bold h-10 text-ellipsis overflow-hidden'>{header}</h1>
-                    <p className='group-hover:opacity-100 opacity-0'>{desc}</p>
+                <div className="grid auto-rows-min h-1/3 group-hover:h-1/2 md:group-hover:h-1/3 transition-all duration-500 ease-out md:h-1/4 w-full place-self-end text-primary overflow-y-auto p-3 backdrop-brightness-75 overflow-x-hidden gap-1">
+                    <h1 className='text-sm md:text-3xl text-center group-hover:text-left transition-all duration-500 font-bold h-10 text-ellipsis overflow-hidden group-hover:h-fit'>{header}</h1>
+                    <p className='group-hover:block hidden text-sm md:text-base'>{desc}</p>
+                </div>
+                <div className="bg-semi-dark transition-all duration-500 top-3 left-3 absolute rounded-full p-1 text-primary flex gap-1 place-items-center overflow-hidden w-6 group-hover:w-28 flex-nowrap whitespace-nowrap">
+                    <Info className="flex-shrink-0" size={15} />
+                    <span className='text-[0.6rem] h-fit'>Decorative Image</span>
                 </div>
             </div>
         )
@@ -91,7 +93,7 @@ const SectionTrending = () => {
                 {/* Container scrollable */}
                 <div
                     ref={scrollRef}
-                    className="flex overflow-x-scroll no-scrollbar w-full gap-3 auto-rows-fr h-[25svh] md:h-[50svh] snap-x"
+                    className="flex overflow-x-scroll no-scrollbar w-full gap-3 auto-rows-fr h-[25svh] md:h-[50svh]"
                 >
                     <Items
                         bg={Trend1}

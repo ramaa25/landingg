@@ -14,7 +14,7 @@ const VariantMore = ({variants}) => {
     const img1 = variants === 'EDT' ? EDT_DIOR : variants === 'EDP' ? EDP_YVES : variants === 'ExDP' ? EXDP_TOMFORD : null;
     const img2 = variants === 'EDT' ? EDT_VERSACE : variants === 'EDP' ? EDP_COCO : variants === 'ExDP' ? EXDP_AMOUAGE : null;
 
-    const DescRow = ({header, img}) => {
+    const DescRow = ({header, img, classCon, classChild}) => {
         const Desc = ({desc, title, className}) => {
             return (
                 <div className={`flex flex-col gap-2 ${className}`}>
@@ -33,8 +33,8 @@ const VariantMore = ({variants}) => {
                     <Desc desc={desc1} title="Longevity" className={'min-[321px]:border-r'}/>
                     <Desc desc={desc2} title="Use" />
                 </div>
-                <div className="absolute top-0 right-0 h-full grid place-content-center">
-                <div className="rounded-full z-10 max-[320px]:w-14 max-[320px]:h-14 w-20 h-20 overflow-hidden translate-x-1/2">
+                <div className={`absolute top-0 h-full grid place-content-center ${classCon}`}>
+                <div className={`rounded-full z-10 max-[320px]:w-14 max-[320px]:h-14 w-20 h-20 overflow-hidden translate-x-1/2 ${classChild}`}>
                     <img src={img} alt="" className='w-full h-full object-cover' />
                 </div>
                 </div>
@@ -44,8 +44,8 @@ const VariantMore = ({variants}) => {
 
     return (
         <div className="grid grid-rows-2 md:grid-cols-none gap-5 text-primary w-full text-sm sm:text-base 2xl:text-lg">
-            <DescRow header={header1} img={img1}/>
-            <DescRow header={header2} img={img2}/>
+            <DescRow header={header1} img={img1} classCon={'right-0'}/>
+            <DescRow header={header2} img={img2} classCon={'left-0 md:left-auto md:right-0'} classChild={'-translate-x-1/2 md:translate-x-1/2'}/>
         </div>
     )
 }
