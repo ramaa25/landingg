@@ -5,6 +5,7 @@ import Jumbotron from './components/Jumbotron';
 import SectionVariants from './components/Section/SectionVariants';
 import SectionTrending from './components/Section/SectionTrending';
 import SectionSay from './components/Section/SectionSay';
+import SectionBlog from './components/Section/SectionBlog';
 
 const App = () => {
   
@@ -15,6 +16,7 @@ const App = () => {
       <SectionVariants />
       <SectionTrending />
       <SectionSay />
+      <SectionBlog />
     </div>
   );
 }

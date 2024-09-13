@@ -5,6 +5,7 @@ import EDP_YVES from '../../img/la-nuit.png'
 import EDP_COCO from '../../img/coco-edp.jpg'
 import EXDP_TOMFORD from '../../img/tomford.jpg'
 import EXDP_AMOUAGE from '../../img/amouge-exdp.jpg'
+import ImgLoad from '../ImgLoad'
 
 const VariantMore = ({variants}) => {
     const header1 = variants === 'EDT' ? 'Dior Sauvage EDT' : variants === 'EDP' ? 'La Nuit de L’Homme EDP' : variants === 'ExDP' ? 'Ford Tobacco Vanille ExDP' : null;
@@ -35,7 +36,7 @@ const VariantMore = ({variants}) => {
                 </div>
                 <div className={`absolute top-0 h-full grid place-content-center ${classCon}`}>
                 <div className={`rounded-full z-10 max-[320px]:w-14 max-[320px]:h-14 w-20 h-20 overflow-hidden translate-x-1/2 ${classChild}`}>
-                    <img src={img} alt="" className='w-full h-full object-cover' />
+                    <ImgLoad src={img} alt="" className='w-full h-full object-cover' />
                 </div>
                 </div>
             </div>
@@ -45,7 +46,7 @@ const VariantMore = ({variants}) => {
     return (
         <div className="grid grid-rows-2 md:grid-cols-none gap-5 text-primary w-full text-sm sm:text-base 2xl:text-lg">
             <DescRow header={header1} img={img1} classCon={'right-0'}/>
-            <DescRow header={header2} img={img2} classCon={'left-0 md:left-auto md:right-0'} classChild={'-translate-x-1/2 md:translate-x-1/2'}/>
+            <DescRow header={header2} img={img2} classCon={'max-[320px]:-left-16 -left-20 md:left-auto md:right-0'} classChild={'-translate-x-1/2 md:translate-x-1/2'}/>
         </div>
     )
 }

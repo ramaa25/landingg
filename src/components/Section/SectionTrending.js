@@ -11,6 +11,7 @@ const SectionTrending = () => {
     const scrollRef = useRef(null);
     const [scrollProgress, setScrollProgress] = useState(0);
     const [scrollCount, setScrollCount] = useState(0);
+    const [loadImg, setLoadImg] = useState(true);
 
     useEffect(() => {
         const updateScrollCount = () => {
@@ -66,13 +67,14 @@ const SectionTrending = () => {
         return (
             <div
                 className={`bg-gray-300 rounded-3xl flex-none w-[47.5%] sm:w-[31.85%] lg:w-[32.75%] transition-all duration-500 ease-out bg-cover will-change-transform grid overflow-hidden bg-center group relative`}
-                style={{ backgroundImage: `url(${bg})` }}
+                style={{ backgroundImage: `${loadImg ? `url(${bg})` : 'none'}` }}
+                onLoad={() => setLoadImg(false)}
             >
                 <div className="grid auto-rows-min h-1/3 group-hover:h-1/2 md:group-hover:h-1/3 transition-all duration-500 ease-out md:h-1/4 w-full place-self-end text-primary overflow-y-auto p-3 backdrop-brightness-75 overflow-x-hidden gap-1">
                     <h1 className='text-sm md:text-3xl text-center group-hover:text-left transition-all duration-500 font-bold h-10 text-ellipsis overflow-hidden group-hover:h-fit'>{header}</h1>
                     <p className='group-hover:block hidden text-sm md:text-base'>{desc}</p>
                 </div>
-                <div className="bg-semi-dark transition-all duration-500 top-3 left-3 absolute rounded-full p-1 text-primary flex gap-1 place-items-center overflow-hidden w-6 group-hover:w-28 flex-nowrap whitespace-nowrap">
+                <div className="bg-semi-dark transition-all duration-500 top-3 left-3 absolute rounded-full p-1 text-primary flex gap-1 place-items-center overflow-hidden w-6 group-hover:w-28 flex-nowrap whitespace-nowrap no-scrollbar">
                     <Info className="flex-shrink-0" size={15} />
                     <span className='text-[0.6rem] h-fit'>Decorative Image</span>
                 </div>

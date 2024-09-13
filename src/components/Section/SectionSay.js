@@ -4,6 +4,7 @@ import Img2 from "../../img/say2.jpg"
 import Img3 from "../../img/say3.jpg"
 import { QuoteIcon, ArrowRight, ArrowLeft } from "lucide-react";
 import { useRef, useState, useEffect } from 'react';
+import ImgLoad from "../ImgLoad";
 
 const SectionSay = () => {
     const conRef = useRef(null);
@@ -63,9 +64,9 @@ const SectionSay = () => {
     return (
         <Section>
             <Section
-            className="bg-secondary rounded-3xl relative"
+            className="bg-secondary rounded-3xl relative p-5 md:p-10 md:pt-0"
             header={
-                <h1 className="text-4xl md:text-5xl font-bold p-5 text-center">What They Say</h1>
+                <h1 className="text-xl sm:text-4xl md:text-5xl font-bold py-3 sm:p-10 text-center">What They Say</h1>
             }
             >
                 <div 
@@ -73,12 +74,12 @@ const SectionSay = () => {
                 className="w-full grid grid-cols-[100%_100%_100%] grid-flow-col auto-cols-auto overflow-x-auto snap-mandatory snap-x scroll-smooth no-scrollbar will-change-transform">
                     <div className="flex gap-5 snap-center md:flex-row flex-col">
                         <div className="rounded-2xl overflow-hidden aspect-video w-full md:w-1/2 flex-shrink-0">
-                            <img src={Img1} alt="img" className="object-cover w-full h-full" />
+                            <ImgLoad src={Img1} alt="img" className="object-cover w-full h-full" />
                         </div>
-                        <div className="grid place-content-center md:gap-3">
-                            <QuoteIcon className="md:w-20 md:h-20"/>
-                            <p className="font-semibold md:text-xl">A woman’s perfume tells more about her than her handwriting.</p>
-                            <div className="text-xs md:text-base mt-3">
+                        <div className="grid place-content-center md:gap-2 lg:gap-3">
+                            <QuoteIcon className="w-5 h-5 lg:w-8 lg:h-8 text-sec"/>
+                            <p className="font-semibold md:text-xl lg:text-3xl">A woman’s perfume tells more about her than her handwriting.</p>
+                            <div className="text-xs md:text-base mt-3 w-1/2">
                                 <h1 className="font-bold">Oscar Wilde</h1>
                                 <span className="italic">Playwright, poet, and author</span>
                             </div>
@@ -86,12 +87,12 @@ const SectionSay = () => {
                     </div>
                     <div className="flex gap-5 snap-center md:flex-row flex-col">
                         <div className="rounded-2xl overflow-hidden aspect-video w-full md:w-1/2 flex-shrink-0">
-                            <img src={Img2} alt="img" className="object-cover w-full h-full" />
+                            <ImgLoad src={Img2} alt="img" className="object-cover w-full h-full" />
                         </div>
-                        <div className="grid place-content-center md:gap-3">
-                            <QuoteIcon className="md:w-20 md:h-20"/>
-                            <p className="font-semibold md:text-xl">No elegance is possible without perfume. It is the unseen, unforgettable, ultimate accessory.</p>
-                            <div className="text-xs md:text-base mt-3">
+                        <div className="grid place-content-center md:gap-2 lg:gap-3">
+                            <QuoteIcon className="w-5 h-5 lg:w-8 lg:h-8 text-sec"/>
+                            <p className="font-semibold md:text-xl lg:text-3xl">No elegance is possible without perfume. It is the unseen, unforgettable, ultimate accessory.</p>
+                            <div className="text-xs md:text-base mt-3 w-1/2">
                                 <h1 className="font-bold">Coco Chanel</h1>
                                 <span className="italic">Fashion designer and businesswoman</span>
                             </div>
@@ -99,26 +100,26 @@ const SectionSay = () => {
                     </div>
                     <div className="flex gap-5 snap-center md:flex-row flex-col">
                         <div className="rounded-2xl overflow-hidden aspect-video w-full md:w-1/2 flex-shrink-0">
-                            <img src={Img3} alt="img" className="object-cover w-full h-full" />
+                            <ImgLoad src={Img3} alt="img" className="object-cover w-full h-full" />
                         </div>
-                        <div className="grid place-content-center md:gap-3">
-                            <QuoteIcon className="md:w-20 md:h-20"/>
-                            <p className="font-semibold md:text-xl">Perfume is the indispensable complement to the personality of women, the finishing touch on a dress.</p>
-                            <div className="text-xs md:text-base mt-3">
+                        <div className="grid place-content-center md:gap-2 lg:gap-3">
+                            <QuoteIcon className="w-5 h-5 lg:w-8 lg:h-8 text-sec"/>
+                            <p className="font-semibold md:text-xl lg:text-3xl">Perfume is the indispensable complement to the personality of women, the finishing touch on a dress.</p>
+                            <div className="text-xs md:text-base mt-3 w-1/2">
                                 <h1 className="font-bold">Christian Dior</h1>
                                 <span className="italic">Fashion designer</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="absolute -right-3 md:right-0 bottom-0 w-[108%] md:w-fit justify-between md:p-10 flex gap-3 h-full md:h-fit items-center">
+                <div className="absolute right-0 bottom-0 md:w-fit justify-between p-5 md:p-3 lg:p-7 flex gap-3 items-center">
                         {/* Tombol scroll kiri */}
                         <button
                             onClick={scrollLeft}
                             disabled={scrollProgress === 0}
                             className={`p-2 md:p-3 flex-shrink-0 h-fit outline outline-2 outline-semi-dark rounded-full shadow-lg transition-colors duration-300 order-1 ${scrollProgress === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:cursor-pointer hover:outline-none hover:bg-semi-dark hover:text-primary'}`}
                         >
-                            <ArrowLeft className="w-2 h-2 md:w-6 md:h-6"/>
+                            <ArrowLeft className="w-2 h-2 sm:w-4 sm:h-4 md:w-3 md:h-3 lg:w-6 lg:h-6"/>
                         </button>
                         {/* Tombol scroll kanan */}
                         <button
@@ -126,7 +127,7 @@ const SectionSay = () => {
                             disabled={scrollProgress === 100}
                             className={`p-2 md:p-3 flex-shrink-0 h-fit outline outline-2 outline-semi-dark rounded-full shadow-lg transition-colors duration-300 order-3 ${scrollProgress === 100 ? 'opacity-50 cursor-not-allowed' : 'hover:cursor-pointer hover:outline-none hover:bg-semi-dark hover:text-primary'}`}
                         >
-                            <ArrowRight className="w-2 h-2 md:w-6 md:h-6"/>
+                            <ArrowRight className="w-2 h-2 sm:w-4 sm:h-4 md:w-3 md:h-3 lg:w-6 lg:h-6"/>
                         </button>
                     </div>
             </Section>
