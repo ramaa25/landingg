@@ -126,21 +126,23 @@ const SectionTrending = () => {
                     {/* Progress bar */}
                     <div className="w-full h-2 bg-gray-200 mt-4 relative order-2 lg:order-first">
                         <div
-                            className="h-2 bg-semi-dark top-0 left-0"
+                            className="h-2 bg-semi-dark top-0 left-0 will-change-transform"
                             style={{ width: `${scrollProgress}%` }}
                         />
                     </div>
                     {/* Tombol scroll kiri */}
                     <button
                         onClick={scrollLeft}
-                        className="p-3 outline outline-2 outline-semi-dark rounded-full shadow-lg hover:cursor-pointer hover:outline-none hover:bg-semi-dark hover:text-primary transition-colors duration-300 order-1"
+                        disabled={scrollProgress === 0}
+                        className={`p-3 outline outline-2 outline-semi-dark rounded-full shadow-lg transition-colors duration-300 order-1 ${scrollProgress === 0 ? 'opacity-50 cursor-not-allowed' : 'hover:cursor-pointer hover:outline-none hover:bg-semi-dark hover:text-primary'}`}
                     >
                         <ArrowLeft />
                     </button>
                     {/* Tombol scroll kanan */}
                     <button
                         onClick={scrollRight}
-                        className="p-3 outline outline-2 outline-semi-dark rounded-full shadow-lg hover:cursor-pointer hover:outline-none hover:bg-semi-dark hover:text-primary transition-colors duration-300 order-3"
+                        disabled={scrollProgress === 100}
+                        className={`p-3 outline outline-2 outline-semi-dark rounded-full shadow-lg transition-colors duration-300 order-3 ${scrollProgress === 100 ? 'opacity-50 cursor-not-allowed' : 'hover:cursor-pointer hover:outline-none hover:bg-semi-dark hover:text-primary'}`}
                     >
                         <ArrowRight />
                     </button>
