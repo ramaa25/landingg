@@ -18,7 +18,7 @@ const Header = () => {
     }, [isOpen])
     
     return (
-        <div className="grid grid-cols-[auto_1fr_auto] w-full ">
+        <div className="grid grid-cols-[auto_1fr_auto] w-full px-3 pt-3">
             <div className="h-full w-20">
                 <img src={Logo} alt="logo" className="object-cover w-full h-full"/>
             </div>

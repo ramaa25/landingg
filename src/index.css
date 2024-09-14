@@ -1,6 +1,5 @@
 :root {
   box-sizing: border-box;
-  padding: 10px;
   border: none;
   outline: none;
 }
@@ -28,4 +27,8 @@ code {
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;  /* Chrome, Safari, and Opera */
+}
+
+Section {
+  padding-inline: 2rem;
 }

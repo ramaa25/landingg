@@ -26,7 +26,7 @@ const SectionBlog = () => {
     return (
         <Section
             header={
-                <div className="p-5 text-3xl md:text-5xl font-bold text-center">
+                <div className="p-5 text-3xl md:text-5xl font-bold text-center md:pb-10">
                     <h1>Our Blog</h1>
                 </div>
             }

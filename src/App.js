@@ -6,6 +6,8 @@ import SectionVariants from './components/Section/SectionVariants';
 import SectionTrending from './components/Section/SectionTrending';
 import SectionSay from './components/Section/SectionSay';
 import SectionBlog from './components/Section/SectionBlog';
+import SectionGallery from './components/Section/SectionGallery';
+import Footer from './components/Section/Footer';
 
 const App = () => {
   
@@ -17,6 +19,8 @@ const App = () => {
       <SectionTrending />
       <SectionSay />
       <SectionBlog />
+      <SectionGallery />
+      <Footer />
     </div>
   );
 }
