@@ -33,7 +33,7 @@ const SectionGallery = () => {
                     <text y="40">Perfume</text>
                 </svg>
                 <svg viewBox="0 0 450 50" className='absolute -top-1/3 right-20 fill-transparent stroke-black stroke-[0.5] text-5xl font-extrabold -rotate-90 translate-x-1/2 hidden md:block'>
-                    <text y="40">Nicely</text>
+                    <text y="38.5">Nicely</text>
                 </svg>
             </div>  
         </Section>

@@ -32,3 +32,10 @@ code {
 Section {
   padding-inline: 2rem;
 }
+
+.perspective {
+  perspective: 400px;
+}
+.rotate3d {
+  transform: rotateY('30deg');
+}

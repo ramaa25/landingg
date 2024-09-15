@@ -36,7 +36,7 @@ const ImgLoad = ({ src, alt, className }) => {
                 </div>
             ) : (
                 imageSrc ? (
-                    <img src={imageSrc} alt={alt} className={`object-cover w-full h-full ${className}`}/>
+                    <img src={imageSrc} alt={alt} className={`${className} object-cover w-full h-full`}/>
                 ) : (
                     <div>No image available</div>
                 )
