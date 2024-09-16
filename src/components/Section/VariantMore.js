@@ -45,8 +45,8 @@ const VariantMore = ({variants}) => {
 
     return (
         <div className="grid grid-rows-2 md:grid-cols-none gap-5 text-primary w-full text-sm sm:text-base 2xl:text-lg">
-            <DescRow header={header1} img={img1} classCon={'right-0'}/>
-            <DescRow header={header2} img={img2} classCon={'max-[320px]:-left-16 -left-20 md:left-auto md:right-0'} classChild={'-translate-x-1/2 md:translate-x-1/2'}/>
+            <DescRow header={header1} img={img1} classCon={'right-2'}/>
+            <DescRow header={header2} img={img2} classCon={'max-[320px]:-left-16 -left-[4.5rem] md:left-auto md:right-0'} classChild={'-translate-x-1/2 md:translate-x-1/2'}/>
         </div>
     )
 }

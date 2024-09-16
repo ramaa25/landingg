@@ -84,18 +84,19 @@ const SectionTrending = () => {
 
     return (
         <Section
-            className={'overflow-hidden'}
+            className={'overflow-hidden h-96 md:h-full'}
             header={
                 <div className="w-full text-center text-4xl md:text-5xl font-bold p-2 pb-10">
                     <h1>Trending Variants</h1>
                 </div>
             }
         >
-            <div className="relative no-scrollbar">
+            <div className="relative no-scrollbar h-40 md:h-96">
+
                 {/* Container scrollable */}
                 <div
                     ref={scrollRef}
-                    className="flex overflow-x-scroll no-scrollbar w-full gap-3 auto-rows-fr h-[25svh] md:h-[50svh]"
+                        className="flex overflow-x-scroll no-scrollbar w-full gap-3 auto-rows-fr h-full"
                 >
                     <Items
                         bg={Trend1}

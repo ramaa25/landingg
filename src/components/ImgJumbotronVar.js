@@ -36,7 +36,7 @@ const ImgJumbotronVar = () => {
                 images.map((image, index) => (
                     <div
                         key={index}
-                        className={`w-14 h-14 min-[420px]:w-16 min-[420px]:h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden border-4 border-white relative ${
+                        className={`w-14 h-14 min-[420px]:w-16 min-[420px]:h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden border-4 border-white relative ${
                             index !== 0 ? "-ml-8" : ""
                         }`}
                     >

@@ -19,7 +19,7 @@ const LeftJumbotron = () => {
                     <ButtonArrow title="Read More" className={"mt-5"}/>
                 </div>
             </div>
-            <div className="grid row-span-1 md:row-span-2 lg:row-span-2 grid-rows-[1fr_auto] gap-3 lg:place-content-end lg:mt-auto lg:w-fit lg:h-fit max-[380px]:pl-8 pl-10 lg:p-0">
+            <div className="grid row-span-1 md:row-span-2 lg:row-span-2 grid-rows-[1fr_auto] gap-3 md:place-content-end md:mt-auto md:w-fit md:h-fit max-[380px]:pl-8 pl-10 lg:p-0 sm:-mt-5 md:m-0">
                 <ImgJumbotronVar />
                 <span className="mb-10 lg:m-0">
                     500+ Variants

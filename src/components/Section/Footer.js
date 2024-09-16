@@ -35,10 +35,10 @@ const Footer = () => {
     ]
     
     return (
-        <div className="bg-semi-dark h-fit rounded-t-[3.5rem] mt-80 relative">
-            <div className="w-3/4 h-fit md:h-3/4 -top-[22.5%] md:-top-1/2 left-[12.5%] min-[425px]:-top-[10%] bg-secondary absolute rounded-[2.5rem] flex flex-col lg:flex-row md:px-10">
+        <div className="bg-semi-dark h-fit rounded-t-[3.5rem] mt-80 relative px-7 md:px-10 flex flex-col gap-5">
+            <div className="w-3/4 h-fit md:h-2/3 xl:h-3/4 -top-[22.5%] md:-top-1/2 left-[12.5%] min-[600px]:-top-[10%] bg-secondary absolute rounded-[2.5rem] flex flex-col lg:flex-row md:px-10">
                 <div className="flex flex-col gap-3">
-                    <div className="p-5 flex flex-col gap-5 relative z-10">
+                    <div className="flex p-5 flex-col gap-5 relative z-10">
                         <h1 className="font-bold text-2xl">Download Our App</h1>
                         <p>When you sign with us, you must receive a discount and a promotical offer from us</p>
                     </div>
@@ -53,7 +53,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row pt-40 md:pt-32 px-5 gap-10 relative text-primary">
+            <div className="flex flex-col md:flex-row pt-40 md:pt-32 gap-10 relative text-primary">
                 <div className="flex flex-col gap-3 md:w-1/3">
                     <div className="w-20">
                         <ImgLoad src={Logo} alt="logo" className="invert" />
@@ -68,17 +68,19 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                {FooterData.map((data, i) => <SectionFooter key={i} header={data.header} a1={data.a1} a2={data.a2} a3={data.a3} />)}
-                <hr />
+                <div className="flex gap-5 max-[350px]:flex-col flex-wrap justify-between md:flex-nowrap md:justify-normal w-full">
+                    {FooterData.map((data, i) => <SectionFooter key={i} header={data.header} a1={data.a1} a2={data.a2} a3={data.a3} />)}
+                </div>
             </div>
-            <p className="text-center text-primary py-5 font-extralight text-sm">@tuturam, 2024. All Rights Reserved.</p> 
+            <hr />
+            <p className="text-center text-primary pb-5 font-extralight text-sm">@tuturam, 2024. All Rights Reserved.</p> 
         </div>
     )
 }
 
 const SectionFooter = ({header, a1, a2, a3}) => {
     return (
-        <div className="flex flex-col gap-2 md:gap-3">
+        <div className="flex flex-col gap-2 md:gap-3 w-1/3">
             <h1 className="font-bold">{header}</h1>
             {
                 header !== "Credits" ? 
@@ -99,7 +101,7 @@ const SectionFooter = ({header, a1, a2, a3}) => {
 
 const AppDownloadButtons = () => {
     return (
-      <div className="flex items-center rounded-lg flex-col min-[450px]:flex-row gap-3 pb-5 w-full min-[450px]:justify-center">
+      <div className="flex items-center rounded-lg flex-col min-[500px]:flex-row gap-3 pb-5 w-full min-[450px]:justify-center">
         {/* Google Play Button */}
         <button className="flex items-center space-x-3 bg-white rounded-full px-4 py-2 shadow-md hover:shadow-lg transition w-fit">
           <div className="w-7 h-7">
