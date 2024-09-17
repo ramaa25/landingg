@@ -101,7 +101,7 @@ const SectionFooter = ({header, a1, a2, a3}) => {
 
 const AppDownloadButtons = () => {
     return (
-      <div className="flex items-center rounded-lg flex-col min-[500px]:flex-row gap-3 pb-5 w-full min-[450px]:justify-center">
+      <div className="flex items-center rounded-lg flex-col sm:flex-row gap-3 pb-5 w-full justify-center">
         {/* Google Play Button */}
         <button className="flex items-center space-x-3 bg-white rounded-full px-4 py-2 shadow-md hover:shadow-lg transition w-fit">
           <div className="w-7 h-7">

@@ -39,3 +39,15 @@ Section {
 .rotate3d {
   transform: rotateY('30deg');
 }
+
+@media screen and (max-height: 600px) {
+  .jumbotron {
+    height: 35rem;
+  }
+}
+
+@media screen and (min-height: 600px) {
+  .jumbotron {
+    height: 90.5vh;
+  }
+}

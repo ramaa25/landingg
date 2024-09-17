@@ -12,7 +12,7 @@ import Footer from './components/Section/Footer';
 const App = () => {
   
   return (
-    <div className='h-screen w-full relative'>
+    <div className='h-screen w-full relative '>
       <Header />
       <Jumbotron />
       <SectionVariants />
