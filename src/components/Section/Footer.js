@@ -36,7 +36,7 @@ const Footer = () => {
     
     return (
         <div className="bg-semi-dark h-fit rounded-t-[3.5rem] mt-80 relative px-7 md:px-10 flex flex-col gap-5">
-            <div className="w-3/4 h-fit md:h-2/3 xl:h-3/4 -top-[22.5%] md:-top-1/2 left-[12.5%] min-[600px]:-top-[10%] bg-secondary absolute rounded-[2.5rem] flex flex-col lg:flex-row md:px-10">
+            <div className="w-3/4 h-fit md:h-2/3 xl:h-3/4 -top-[22.5%] md:-top-1/2 left-[12.5%] min-[600px]:-top-[10%] bg-secondary absolute rounded-[2.5rem] flex flex-col lg:flex-row md:px-10 ">
                 <div className="flex flex-col gap-3">
                     <div className="flex p-5 flex-col gap-5 relative z-10">
                         <h1 className="font-bold text-2xl">Download Our App</h1>
@@ -52,6 +52,7 @@ const Footer = () => {
                         <ImgLoad src={App2} alt="app2" className="rounded-3xl brightness-50 scale-125 lg:-translate-y-10"/>
                     </div>
                 </div>
+            <div className="absolute -top-10 h-5 w-5" id="mobile"></div>
             </div>
             <div className="flex flex-col md:flex-row pt-40 md:pt-32 gap-10 relative text-primary">
                 <div className="flex flex-col gap-3 md:w-1/3">
@@ -74,6 +75,7 @@ const Footer = () => {
             </div>
             <hr />
             <p className="text-center text-primary pb-5 font-extralight text-sm">@tuturam, 2024. All Rights Reserved.</p> 
+
         </div>
     )
 }

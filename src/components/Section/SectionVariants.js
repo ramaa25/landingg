@@ -12,7 +12,8 @@ const SectionVariants = () => {
     return (
         <Section 
             header={
-            <div className='flex justify-between h-full flex-wrap gap-3'>
+            <div className='flex justify-between h-full flex-wrap gap-3 relative'>
+                <div className="absolute -top-10" id='types'></div>
                 <div className="grid h-full place-self-center w-full md:w-fit pb-5 md:p-0">
                     <h1 className='text-4xl text-center md:text-start md:text-5xl font-bold'>Types</h1>
                 </div>

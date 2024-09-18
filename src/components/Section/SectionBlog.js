@@ -15,7 +15,7 @@ const SectionBlog = () => {
                 <div className="flex flex-col md:gap-1">
                     <h1 className="font-semibold md:text-xl lg:text-3xl">{head}</h1>
                     <p className="font-light md:truncate lg:text-md">{paraf}</p>
-                    <a href="" className="border-b-gray-500 border-b-2 w-fit text-gray-800 tracking-wide text-sm md:text-lg mt-2 font-[500]">
+                    <a href="./" className="border-b-gray-500 border-b-2 w-fit text-gray-800 tracking-wide text-sm md:text-lg mt-2 font-[500]">
                         Read More
                     </a>
                 </div>
@@ -26,12 +26,13 @@ const SectionBlog = () => {
     return (
         <Section
             header={
-                <div className="p-5 text-3xl md:text-5xl font-bold text-center md:pb-10">
+                <div className="p-5 text-3xl md:text-5xl font-bold text-center md:pb-10 relative">
+                    <div className="absolute -top-5" id='blogs'></div>
                     <h1>Our Blog</h1>
                 </div>
             }
         >
-            <div className="flex flex-col md:flex-row gap-5">
+            <div className="flex flex-col md:flex-row gap-5 ">
                 <Blogs 
                     src={Img1}
                     head="Discover the Essence of Jasmine"
@@ -46,6 +47,7 @@ const SectionBlog = () => {
             <div className="grid place-content-center my-3">
                 <ButtonArrowBlog title="More Blogs" className={"w-fit mt-5 text-primary"}/>
             </div>
+
         </Section>
     )
 }

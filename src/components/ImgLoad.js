@@ -26,7 +26,7 @@ const ImgLoad = ({ src, alt, className }) => {
         img.onerror = () => {
             setLoading(false); // Handle error case
         };
-
+        // eslint-disable-next-line
     }, [])
     
     return (

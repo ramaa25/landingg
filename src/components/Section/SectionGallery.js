@@ -10,12 +10,14 @@ import Img4 from '../../img/gallery4.jpg'
 const SectionGallery = () => {
     return (
         <Section 
+            className="relative"
             header={
                 <div>
                     <h1 className='text-4xl text-center md:text-5xl font-bold pb-5 md:pb-10'>Gallery</h1>
                 </div>
             }
         >
+            <div className="absolute -top-10" id='gallery'></div>
             <div className='grid grid-cols-2 gap-2 min-[425px]:gap-3 sm:gap-5 md:gap-10 relative'>   
                 <div className="col-span-2 aspect-video rounded-3xl md:col-span-1 md:aspect-square overflow-hidden">
                     <ImgLoad src={Img2} alt="" />
