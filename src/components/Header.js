@@ -3,6 +3,7 @@ import Button from "./Button";
 import Menu from "./Header/Menu"
 import Logo from "../img/logo-food.png"
 import { MenuIcon } from "lucide-react";
+import ImgLoad from "./ImgLoad";
 
 const Header = () => {
     const [isOpen, setIsOpen] = React.useState(false);
@@ -28,7 +29,7 @@ const Header = () => {
     return (
         <div className="grid grid-cols-[auto_1fr_auto] w-full px-3 pt-3">
             <div className="h-full w-20">
-                <img src={Logo} alt="logo" className="object-cover w-full h-full"/>
+                <ImgLoad src={Logo} alt="logo" className="object-cover w-full h-full"/>
             </div>
             <div className="bg-semi-dark relative">
                 <Menu isOpen={isOpen} className="hidden md:flex" scroll={scrollToSection}/>

@@ -9,7 +9,7 @@ const SectionBlog = () => {
     const Blogs = ({src, head, paraf, className}) => {
         return (
             <div className={`flex flex-col gap-3 overflow-hidden flex-shrink-0 md:w-1/2 ${className}`}>
-                <div className="rounded-3xl overflow-hidden h-full bg-black">
+                <div className="rounded-3xl overflow-hidden h-full">
                     <ImgLoad src={src} alt="img" className="aspect-video" />
                 </div>
                 <div className="flex flex-col md:gap-1">
@@ -45,7 +45,7 @@ const SectionBlog = () => {
                 />
             </div>
             <div className="grid place-content-center my-3">
-                <ButtonArrowBlog title="More Blogs" className={"w-fit mt-5 text-primary"}/>
+                <ButtonArrowBlog title="More Blogs" className={"w-fit mt-10 text-primary"}/>
             </div>
 
         </Section>

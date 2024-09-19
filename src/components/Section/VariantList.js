@@ -2,6 +2,7 @@ import React from 'react';
 import EDT from '../../img/perfume.png'
 import EDP from '../../img/perfume (1).png'
 import ExDP from '../../img/parfum2.png'
+import ImgLoad from '../ImgLoad';
 
 const VariantList = ({variants, setVariants}) => {
     const Listing = ({logo, desc}) => {
@@ -13,7 +14,7 @@ const VariantList = ({variants, setVariants}) => {
                 onClick={() => setVariants(desc)}
             >
                 <div className={`w-8 h-8 md:w-10 md:h-10 p-2 rounded-full overflow-hidden flex-shrink-0 ${variants === desc ? 'bg-white' : 'bg-semi-dark'}`}>
-                    <img src={logo} alt="edt" className={`w-full h-full aspect-[4/4]  ${variants === desc ? 'invert-0' : 'invert'}`}/>
+                    <ImgLoad src={logo} alt="edt" className={`w-full h-full aspect-[4/4]  ${variants === desc ? 'invert-0' : 'invert'}`}/>
                 </div>
                 <span className="text-sm md:text-base">
                     {desc}
