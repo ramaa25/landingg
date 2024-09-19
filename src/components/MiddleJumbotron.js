@@ -10,7 +10,7 @@ const MiddleJumbotron = () => {
                     <img src={ParfumeKiri} alt="parfum" className="object-contain w-full h-full filter"/>
                 </div>
                 <div className=" row-span-2 animate-bounce2 place-content-center blur-md lg:blur-none will-change-transform">
-                    <ImgLoad src={ParfumeKanan} alt="parfum" className="object-contain w-full h-full"/>
+                    <img src={ParfumeKanan} alt="parfum" className="object-contain w-full h-full"/>
                 </div>
             </div>
             <div className="col-start-1 row-start-1 md:row-start-2 row-span-2 col-span-2 rounded-full bg-radial-gradient relative h-full -z-0"></div>
