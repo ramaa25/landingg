@@ -13,31 +13,31 @@ const Menu = ({ isOpen, className, scroll, setIsOpen }) => {
         >
             <span
                 onClick={() => handleClick('types')}
-                className="p-2 whitespace-nowrap border-b-2 border-semi-dark md:border-none"
+                className="p-2 whitespace-nowrap border-b-2 border-semi-dark md:border-none cursor-pointer"
             >
                 Types
             </span>
             <span
                 onClick={() => handleClick('trending')}
-                className="p-2 whitespace-nowrap border-b-2 border-semi-dark md:border-none"
+                className="p-2 whitespace-nowrap border-b-2 border-semi-dark md:border-none cursor-pointer"
             >
                 Trending
             </span>
             <span
                 onClick={() => handleClick('blogs')}
-                className="p-2 whitespace-nowrap border-b-2 border-semi-dark md:border-none"
+                className="p-2 whitespace-nowrap border-b-2 border-semi-dark md:border-none cursor-pointer"
             >
                 Blogs
             </span>
             <span
                 onClick={() => handleClick('gallery')}
-                className="p-2 whitespace-nowrap border-b-2 border-semi-dark md:border-none"
+                className="p-2 whitespace-nowrap border-b-2 border-semi-dark md:border-none cursor-pointer"
             >
                 Gallery
             </span>
             <span
                 onClick={() => handleClick('mobile')}
-                className="p-2 whitespace-nowrap border-b-2 border-semi-dark md:border-none"
+                className="p-2 whitespace-nowrap border-b-2 border-semi-dark md:border-none cursor-pointer"
             >
                 Mobile App
             </span>
