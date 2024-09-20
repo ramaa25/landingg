@@ -22,6 +22,9 @@ module.exports = {
         'semi-dark': '#1B263B',
         'sec': '#B7B1B0',
         'secondary': '#d1d3cd'
+      },
+      fontFamily: {
+        'belwe': ['belwe', 'sans-serif']
       }
     },
   },

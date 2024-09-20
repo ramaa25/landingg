@@ -80,8 +80,8 @@ const SectionSay = () => {
                             <QuoteIcon className="w-5 h-5 lg:w-8 lg:h-8 text-sec"/>
                             <p className="font-semibold md:text-xl lg:text-3xl">A woman’s perfume tells more about her than her handwriting.</p>
                             <div className="text-xs md:text-base mt-3 w-1/2">
-                                <h1 className="font-bold">Oscar Wilde</h1>
-                                <span className="italic">Playwright, poet, and author</span>
+                                <h1 className="font-bold text-lg">Oscar Wilde</h1>
+                                <span className="italic text-sm">Playwright, poet, and author</span>
                             </div>
                         </div>
                     </div>
@@ -93,8 +93,8 @@ const SectionSay = () => {
                             <QuoteIcon className="w-5 h-5 lg:w-8 lg:h-8 text-sec"/>
                             <p className="font-semibold md:text-xl lg:text-3xl">No elegance is possible without perfume. It is the unseen, unforgettable, ultimate accessory.</p>
                             <div className="text-xs md:text-base mt-3 w-1/2">
-                                <h1 className="font-bold">Coco Chanel</h1>
-                                <span className="italic">Fashion designer and businesswoman</span>
+                                <h1 className="font-bold text-lg">Coco Chanel</h1>
+                                <span className="italic text-sm">Fashion designer and businesswoman</span>
                             </div>
                         </div>
                     </div>
@@ -106,8 +106,8 @@ const SectionSay = () => {
                             <QuoteIcon className="w-5 h-5 lg:w-8 lg:h-8 text-sec"/>
                             <p className="font-semibold md:text-xl lg:text-3xl">Perfume is the indispensable complement to the personality of women, the finishing touch on a dress.</p>
                             <div className="text-xs md:text-base mt-3 w-1/2">
-                                <h1 className="font-bold">Christian Dior</h1>
-                                <span className="italic">Fashion designer</span>
+                                <h1 className="font-bold text-lg">Christian Dior</h1>
+                                <span className="italic text-sm">Fashion designer</span>
                             </div>
                         </div>
                     </div>

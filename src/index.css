@@ -13,6 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #E0E1DD;
   transform: translateZ(0); /* Kadang membantu menghilangkan masalah rendering */
+  font-family: belwe, sans-serif;
 }
 
 code {
@@ -30,15 +31,17 @@ code {
   display: none;  /* Chrome, Safari, and Opera */
 }
 
-Section {
-  padding-inline: 2rem;
+.reveal {
+  opacity: 0;
+  scale: 0.9;
+  top: 20px;
+  transition: all 0.5s ease-in-out;
 }
 
-.perspective {
-  perspective: 400px;
-}
-.rotate3d {
-  transform: rotateY('30deg');
+.reveal.active {
+  opacity: 1;
+  scale: 1;
+  top: 0;
 }
 
 @media screen and (max-height: 600px) {
